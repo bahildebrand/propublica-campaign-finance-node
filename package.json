@@ -1,0 +1,17 @@
+{
+  "name": "ppcf",
+  "version": "1.0.0",
+  "description": "ProPublica Campaign Finance API Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blake Hildebrand",
+  "license": "ISC",
+  "dependencies": {
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}
