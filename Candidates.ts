@@ -6,6 +6,7 @@ export interface Candidates {
     leaders(args: any): any;
     recent(args: any): any;
     candidate(args: any): any;
+    lateContributions(args: any): any;
 }
 
 export class Candidates implements IEndPoint {
@@ -20,7 +21,8 @@ var subStrs = {
     'search': 'search.json?query={candidate}',
     'recent': 'new.json',
     'leaders': 'leaders/{category}.json',
-    'candidate': '{fec-id}.json'
+    'candidate': '{fec-id}.json',
+    'lateContributions': '{fec-id}/48hour.json'
 }
 
 for (let key in subStrs) {

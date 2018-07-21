@@ -17,7 +17,7 @@ let c = new CampaignFinance('2016');
 //     console.log(error);
 // });
 
-c.candidates.candidate({'fec-id': 'P60005915'})
+c.committees.search({'committee': 'AMERICANS FOR A'})
 .then((result) => {
     console.log(result);
 })
