@@ -1,17 +1,10 @@
-import * as rp from 'request-promise';
+import {Candidates} from './Candidates';
 
-const apiKey = '';
-
-rp({
-    headers: {
-      'X-API-Key': apiKey,
-    },
-    uri: 'https://api.propublica.org/campaign-finance/v1/2018/contributions/48hour.json',
-    method: 'GET'
-  })
-.then(function(result) {
+let c = new Candidates();
+c.apiCall('https://api.propublica.org/campaign-finance/v1/2016', 'search', {'candidate': 'wilson'})
+.then((result) => {
     console.log(result);
 })
-.catch(function(error) {
+.catch((error) => {
     console.log(error);
 });
