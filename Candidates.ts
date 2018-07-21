@@ -1,21 +1,18 @@
 import {IEndPoint} from './types';
 import {apiRequest} from './ApiRequest';
-import {buildUrlStr} from './util'
 
 export class Candidates implements IEndPoint {
-    endpointStr: String = 'candidates';
+    baseUrl: string;
 
-    constuctor(){}
+    constructor(baseUrl: string){
+        this.baseUrl = baseUrl + '/' + 'candidates';
+    }
 
     subStrs = {
         'search': 'search.json?query={candidate}'
     }
 
-    apiCall(baseStr: String, endpoint: String, args: any) {
-        let urlStr: String = this.subStrs['search'];
-
-        urlStr = baseStr + '/' + this.endpointStr + '/' + buildUrlStr(urlStr, args);
-
-        return apiRequest(urlStr);
+    search(args: any): any {
+        return apiRequest(this.baseUrl, this.subStrs['search'], args);
     }
 }
