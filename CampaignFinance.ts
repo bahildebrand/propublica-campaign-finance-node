@@ -2,6 +2,7 @@ import {Candidates} from './Candidates';
 import {Committees} from './Committees';
 import {Filings} from './Filings';
 import {IndependentExpenditures} from './IndependentExpenditures'
+import {President} from './President'
 
 export class CampaignFinance {
     constructor(year: string) {
@@ -11,10 +12,12 @@ export class CampaignFinance {
         this.committees = new Committees(baseStr);
         this.filings = new Filings(baseStr);
         this.independentExpenditures = new IndependentExpenditures(baseStr);
+        this.president = new President(baseStr);
     }
 
     candidates: Candidates;
     committees: Committees;
     filings: Filings;
     independentExpenditures: IndependentExpenditures;
+    president: President;
 }
