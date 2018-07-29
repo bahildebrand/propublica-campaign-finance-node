@@ -4,7 +4,7 @@
   "description": "ProPublica Campaign Finance API Wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "author": "Blake Hildebrand",
   "license": "ISC",
@@ -32,6 +32,7 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "testEnvironment": "node"
   }
 }

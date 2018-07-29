@@ -4,7 +4,7 @@ import {apiRequest} from './ApiRequest';
 export interface Candidates {
     search(args: any): any;
     leaders(args: any): any;
-    recent(args: any): any;
+    recent(): any;
     candidate(args: any): any;
     lateContributions(args: any): any;
     independentExpenditures(args: any): any;
@@ -26,7 +26,7 @@ var subStrs = {
     'leaders': 'leaders/{category}.json',
     'candidate': '{fec-id}.json',
     'lateContributions': '{fec-id}/48hour.json',
-    'independentExpenditures': 'fec-id}/independent_expenditures.json'
+    'independentExpenditures': '{fec-id}/independent_expenditures.json'
 }
 
 for (let key in subStrs) {
