@@ -8,9 +8,11 @@ export interface Electioneering {
 
 export class Electioneering implements IEndPoint {
     baseUrl: string;
+    apiKey: string;
 
-    constructor(baseUrl: string){
+    constructor(baseUrl: string, apiKey: string){
         this.baseUrl = baseUrl + '/' + 'electioneering_communications';
+        this.apiKey = apiKey;
     }
 }
 
@@ -20,5 +22,5 @@ var subStrs = {
 }
 
 for (let key in subStrs) {
-    Electioneering.prototype[key] =  function(args) { return apiRequest(this.baseUrl, subStrs[key], args); };
+    Electioneering.prototype[key] =  function(args) { return apiRequest(this.baseUrl, this.apiKey, subStrs[key], args); };
 }

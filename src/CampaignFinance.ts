@@ -6,15 +6,15 @@ import {President} from './President'
 import {Electioneering} from './Electioneering'
 
 export class CampaignFinance {
-    constructor(year: string) {
+    constructor(year: string, apiKey: string) {
         let baseStr = 'https://api.propublica.org/campaign-finance/v1/' + year;
 
-        this.candidates = new Candidates(baseStr);
-        this.committees = new Committees(baseStr);
-        this.filings = new Filings(baseStr);
-        this.independentExpenditures = new IndependentExpenditures(baseStr);
-        this.president = new President(baseStr);
-        this.electioneering = new Electioneering(baseStr)
+        this.candidates = new Candidates(baseStr, apiKey);
+        this.committees = new Committees(baseStr, apiKey);
+        this.filings = new Filings(baseStr, apiKey);
+        this.independentExpenditures = new IndependentExpenditures(baseStr, apiKey);
+        this.president = new President(baseStr, apiKey);
+        this.electioneering = new Electioneering(baseStr, apiKey)
     }
 
     candidates: Candidates;

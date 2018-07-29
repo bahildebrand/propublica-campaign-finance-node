@@ -16,9 +16,11 @@ export interface Committees {
 
 export class Committees implements IEndPoint {
     baseUrl: string;
+    apiKey: string;
 
-    constructor(baseUrl: string){
+    constructor(baseUrl: string, apiKey: string){
         this.baseUrl = baseUrl + '/' + 'committees';
+        this.apiKey = apiKey;
     }
 }
 
@@ -36,5 +38,5 @@ var subStrs = {
 }
 
 for (let key in subStrs) {
-    Committees.prototype[key] =  function(args) { return apiRequest(this.baseUrl, subStrs[key], args); };
+    Committees.prototype[key] =  function(args) { return apiRequest(this.baseUrl, this.apiKey, subStrs[key], args); };
 }

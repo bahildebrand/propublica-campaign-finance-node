@@ -1,11 +1,11 @@
 import * as rp from 'request-promise';
 
-export function apiRequest (baseStr: String, endpoint, args: any): any{
+export function apiRequest (baseStr: String, apiKey: string, endpoint, args: any): any{
   let urlStr = baseStr + '/' + buildUrlStr(endpoint, args);
 
   return rp({
       headers: {
-        'X-API-Key': 'wNS0K9IzjjbbmynKBhBmcSTy6DVt2P092qCkNu53',
+        'X-API-Key': apiKey,
       },
       uri: urlStr,
       method: 'GET'

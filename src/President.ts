@@ -9,9 +9,11 @@ export interface President {
 
 export class President implements IEndPoint {
     baseUrl: string;
+    apiKey: string;
 
-    constructor(baseUrl: string){
+    constructor(baseUrl: string, apiKey: string){
         this.baseUrl = baseUrl + '/' + 'president';
+        this.apiKey = apiKey;
     }
 }
 
@@ -22,5 +24,5 @@ var subStrs = {
 }
 
 for (let key in subStrs) {
-    President.prototype[key] =  function(args) { return apiRequest(this.baseUrl, subStrs[key], args); };
+    President.prototype[key] =  function(args) { return apiRequest(this.baseUrl, this.apiKey, subStrs[key], args); };
 }
