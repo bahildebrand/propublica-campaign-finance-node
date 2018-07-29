@@ -10,6 +10,8 @@ export interface Committees {
     leadership(): any;
     independentExpenditures(args: any): any;
     IERaces(args: any): any;
+    electioneering(args: any): any;
+    bundlers(args: any): any;
 }
 
 export class Committees implements IEndPoint {
@@ -28,7 +30,9 @@ var subStrs = {
     'filings': '{fec-id}/filings.json',
     'leadership': 'committees/leadership.json',
     'independentExpenditures': '{fec-id}/independent_expenditures.json',
-    'IERaces': '{fec-id}/independent_expenditures/races.json'
+    'IERaces': '{fec-id}/independent_expenditures/races.json',
+    'electioneering': '{fec-id}/electioneering_communications.json',
+    'bundlers': '{fec-id}/lobbyist_bundlers.json'
 }
 
 for (let key in subStrs) {
