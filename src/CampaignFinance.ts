@@ -5,7 +5,7 @@ import {IndependentExpenditures} from './IndependentExpenditures'
 import {President} from './President'
 import {Electioneering} from './Electioneering'
 
-export class CampaignFinance {
+export default class CampaignFinance {
     constructor(year: string, apiKey: string) {
         let baseStr = 'https://api.propublica.org/campaign-finance/v1/' + year;
 

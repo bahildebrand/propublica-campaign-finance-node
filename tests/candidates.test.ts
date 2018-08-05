@@ -1,4 +1,4 @@
-import {CampaignFinance} from '../src/CampaignFinance'
+import CampaignFinance from '../src/CampaignFinance'
 
 const c = new CampaignFinance('2016', 'wNS0K9IzjjbbmynKBhBmcSTy6DVt2P092qCkNu53');
 
