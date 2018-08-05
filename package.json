@@ -1,6 +1,6 @@
 {
   "name": "ppcf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ProPublica Campaign Finance API Wrapper",
   "main": "js/index.js",
   "scripts": {
