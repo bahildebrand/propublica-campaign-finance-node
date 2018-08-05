@@ -1,8 +1,8 @@
 {
   "name": "ppcf",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "ProPublica Campaign Finance API Wrapper",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "test": "jest --detectOpenHandles"
   },
@@ -33,7 +33,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
     "collectCoverage": true,
     "moduleFileExtensions": [
       "ts",
