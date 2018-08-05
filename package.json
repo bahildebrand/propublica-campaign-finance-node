@@ -1,13 +1,23 @@
 {
   "name": "ppcf",
-  "version": "1.0.0",
+  "version": "0.1",
   "description": "ProPublica Campaign Finance API Wrapper",
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahildebrand/propublica-campaign-finance-node"
+  },
+  "keywords": [
+    "politics",
+    "campaign finance",
+    "propublica"
+  ],
+  "homepage": "https://github.com/bahildebrand/propublica-campaign-finance-node#readme",
   "author": "Blake Hildebrand",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/node": "^10.5.2",
     "request": "^2.87.0",
