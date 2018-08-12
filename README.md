@@ -5,6 +5,8 @@
 Node wrapper for ProPublica campaign finance API.
 
 # Getting Started
+First request an api key [here](https://www.propublica.org/datastore/api/campaign-finance-api).
+
 Declare a new instance of the object as follows:
 
 ```javascript
