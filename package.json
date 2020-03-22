@@ -19,7 +19,7 @@
   "author": "Blake Hildebrand",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^11.9.0",
+    "@types/node": "^13.9.3",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
   },
